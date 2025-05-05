@@ -1,0 +1,218 @@
+
+/* NAVIGATION*/
+.navbar {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.navbar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li:hover {
+    background-color: #add8e6; /* light blue on hover */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a:hover {
+    color: black;
+}
+/*COOL BUTTONS*/
+.button-52 {
+font-size: 16px;
+font-weight: 200;
+letter-spacing: 1px;
+padding: 13px 20px 13px;
+outline: 0;
+border: 1px solid black;
+cursor: pointer;
+position: relative;
+background-color: rgba(0, 0, 0, 0);
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+.button-52:after {
+content: "";
+background-color: #ffe54c;
+width: 100%;
+z-index: -1;
+position: absolute;
+height: 100%;
+top: 7px;
+left: 7px;
+transition: 0.2s;
+}
+
+.button-52:hover:after {
+top: 0px;
+left: 0px;
+}
+
+@media (min-width: 768px) {
+.button-52 {
+padding: 13px 50px 13px;
+}
+}
+/* JS AUDIO*/
+.audio-box {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+    bottom: 0;
+}
+.audio-box button {
+    margin: 10px 10px 0 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.audio-box button:hover {
+    background-color: #0056b3;
+}
+
+/*QUOTES */
+.quote-box {
+    border: 2px solid #444;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*STOCKS*/
+
+/*DOGS*/
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+
+.swiper {
+width: 100%;
+max-width: 600px;
+height: 400px;
+margin: auto;
+}
+
+.swiper-slide {
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+border-radius: 20px;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+background-color: #000 !important;
+}
+#dog-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#dog-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.slider { width: 100%; padding-bottom: 50%; }
+.slider img { width: 100%; }
+.wrapper { width: 100%; margin: 0; }
+@media only screen and (min-width: 1024px) {
+.wrapper { width: 1024px; margin: auto; }
+}
+/*button 10 dogs*/
+/* Styling for the custom button */
+.button-50 {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 4px solid #000;
+    border-radius: 12px;
+    box-shadow: #fff 6px 6px 0 0, #000 6px 6px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 20px; /* Increased font size */
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0 10px 16px 0;
+    overflow: visible;
+    padding: 20px 60px; /* Increased padding */
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-50:focus,
+.button-50:hover {
+    text-decoration: none;
+}
+
+.button-50:active {
+    box-shadow: rgba(227, 25, 25, 0.125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.button-50:not([disabled]):active {
+    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 1px;
+    transform: translate(3px, 3px);
+}
+
+@media (min-width: 768px) {
+    .button-50 {
+        padding: 24px 70px;
+        font-size: 22px;
+    }
+}
+
+
+/* Container styling for breed details */
+.breed-container {
+margin-top: 50px;
+border: 1px solid #ccc;
+padding: 50px;
+display: none;
+}
+
+/* Styling for breed detail content */
+.breed-detail {
+margin-bottom: 25px;
+}
+
