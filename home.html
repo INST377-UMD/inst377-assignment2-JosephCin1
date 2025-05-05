@@ -1,0 +1,65 @@
+<head>
+<title>Assignment 2</title>
+<link rel="stylesheet" href="assignment2.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+</head>
+<body>
+
+    <main>
+    <!-- Navigation -->
+    <nav>
+        <ul class="navbar">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="stocks.html">Stocks</a></li>
+        <li><a href="dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Navigation Buttons -->
+    <button class="button-52" role="button"><a href="stocks.html">Stocks</a></button>
+    <button class="button-52" role="button"><a href="dogs.html">Dogs</a></button>
+
+    <!-- Quote Box -->
+    <div id="quote-box" class="quote-box">
+        <!-- The quote will be inserted here by JavaScript -->
+    </div>
+
+    <!-- Audio Instructions Box -->
+    <div class="audio-box">
+        <h3>Audio Navigation Instructions</h3>
+        <p>
+        Use the <strong>Turn On Listening</strong> button to enable voice commands for navigating the page.
+        Make sure your microphone is enabled (check the top-left of your browser).
+        </p>
+        <ul>
+        <li>Navigate to a different page by saying: <strong>"Navigate to &lt;page&gt;"</strong></li>
+        <li>Change the page background color by saying: <strong>"Change the color to &lt;color&gt;"</strong></li>
+        <li>Have the site respond with "Hello World" by saying: <strong>"Hello"</strong></li>
+        </ul>
+        <button onclick="turnOnAudio()">Turn On Listening</button>
+        <button onclick="turnOffAudio()">Turn Off Listening</button>
+    </div>
+    </main>
+
+    <!-- ZenQuotes API -->
+    <script>
+    const api_url = "https://zenquotes.io/api/quotes/";
+
+    async function getapi(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+
+        if (data && data.length > 0) {
+        document.getElementById("quote-box").innerText = `"${data[0].q}" — ${data[0].a}`;
+        }
+    }
+
+    getapi(api_url);
+    </script>
+
+<!-- Your Custom Audio Logic -->
+<script src="assignment2.js"></script>
+
+</body>
+</html>
